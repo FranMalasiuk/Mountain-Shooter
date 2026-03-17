@@ -1,12 +1,11 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
-new*
 
 class Menu:
-    def __init__(self):
-        self.window = None
+    new *
+    def __init__(self, window):
+        self.window = window
 
-    new*
     def run(self):
         pass

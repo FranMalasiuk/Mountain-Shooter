@@ -1,18 +1,25 @@
-from Menu import Menu
-from Level import Level
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import pygame
+
+from code.Menu import Menu
+
 
 class Game:
     def __init__(self):
-        self.window = "Screen_Surface"
-        self.menu = Menu(self.window)
-        # O diagrama indica 1..* (uma ou mais fases)
-        self.levels = [Level(self.window, "Fase 01")]
+        pygame.init()
+        self.window = pygame.display.set_mode(size=(600, 480))
 
-    def run(self) -> None:
-        self.menu.run()
-        for lvl in self.levels:
-            lvl.run()
+    def run(self):
+        while True:
+            menu = Menu(self.window)
+            menu.run()
+            pass
 
-if __name__ == "__main__":
-    game = Game()
-    game.run()
+            # Check for all events
+            # for event in pygame.event.get():
+            #     if event.type == pygame.QUIT:
+            #         pygame.quit()  # Close Window
+            #         quit()  # end pygame
+

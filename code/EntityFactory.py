@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from Player import Player
 from Enemy import Enemy
 from Background import Background
