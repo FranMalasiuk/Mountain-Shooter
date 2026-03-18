@@ -1,17 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from abc import ABC
 
-from Player import Player
-from Enemy import Enemy
-from Background import Background
+from code.Background import Background
+from code.Const import WIN_WIDTH
 
-class EntityFactory:
+
+class EntityFactory(ABC):
+
     @staticmethod
-    def get_entity(entity_type: str):
-        if entity_type == "player":
-            return Player("Hero", "Surface", "Rect")
-        elif entity_type == "enemy":
-            return Enemy("Ork", "Surface", "Rect")
-        elif entity_type == "background":
-            return Background("Forest", "Surface", "Rect")
-        return None
+    def get_entity(entity_name: str, position=(0,0)):
+        match entity_name:
+            case 'Level1Bg':
+                list_bg = []
+                for i in range(4):
+                    list_bg.append(Background(f'Level1Bg{i}', (0, 0)))
+                    list_bg.append(Background(f'Level1Bg{i}', (WIN_WIDTH, 0)))
+                return list_bg
+
