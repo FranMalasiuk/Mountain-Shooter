@@ -121,8 +121,6 @@ PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
 PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
 
-
-
 # T
 TIMEOUT_LEVEL = 20000  # 20s
 TIMEOUT_STEP = 100  # 100ms
